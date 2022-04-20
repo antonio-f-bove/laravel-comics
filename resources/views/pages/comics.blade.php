@@ -8,9 +8,9 @@
     <div class="container">
       <div id="current-series" class="button">CURRENT SERIES</div>
       <div class="card-wrapper">
-        @foreach ($comics as $comic)
+        @foreach ($comics as $index => $comic)
           <div class="card">
-            <a href="#">
+            <a href="#"> <!--TODO-->
               <div class="img-wrapper">
                 <img src="{{ $comic['thumb'] }}" alt="comic cover">
               </div>

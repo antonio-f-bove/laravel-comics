@@ -19,3 +19,10 @@ Route::get('/comics', function () {
     return view('pages.comics')
     ->with('comics', $comics);
 })->name('comics.index');
+
+Route::get('/comics/{id}', function($id) {
+    $comics = config('comics');
+    
+    return view('pages.detail')
+    ->with('comic', $comics[$id]);
+})->where('id', '[0-9]+');
